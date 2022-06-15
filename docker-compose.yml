@@ -10,3 +10,8 @@ services:
       NODE_ENV: production
     ports:
       - 3000:3000
+    volumes:
+      - test:/shared
+volumes:
+  test:
+    external: true
