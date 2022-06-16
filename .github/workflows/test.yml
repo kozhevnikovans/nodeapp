@@ -39,6 +39,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/iss:latest
-          build-args: |
-            SERVICE_NAME=101app
-            NODE_VERSION=8.9
