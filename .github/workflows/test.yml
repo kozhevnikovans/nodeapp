@@ -38,4 +38,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/iss:latest
+          tags: ${{secrets.DOCKER_USERNAME}}/server:$(date +%s)
