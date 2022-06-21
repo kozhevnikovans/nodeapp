@@ -39,3 +39,15 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/server:latest
+          
+      - name: Heroku Docker Container Deploy
+        uses: lucassarcanjo/heroku-deploy@2.1.17
+        with:
+            # Email Linked to your Heroku Account
+            email: ${{secrets.HEROKU_MAIL}}
+            # Your Heroku API Key
+            api_key: ${{secrets.HEROKU_TOKEN}}
+            # Your Heroku App Name
+            app_name: nd-app
+            # Dokerfile path
+            dockerfile_path: ./Dockerfile
