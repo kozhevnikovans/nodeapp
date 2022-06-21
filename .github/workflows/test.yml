@@ -41,7 +41,7 @@ jobs:
           tags: ${{secrets.DOCKER_USERNAME}}/server:latest
           
       - name: Heroku Docker Container Deploy
-        uses: lucassarcanjo/heroku-deploy@2.1.17
+        uses: mtsmachado8/heroku-deploy@v2.0.3
         with:
             # Email Linked to your Heroku Account
             email: ${{secrets.HEROKU_MAIL}}
@@ -50,4 +50,4 @@ jobs:
             # Your Heroku App Name
             app_name: nd-app
             # Dokerfile path
-            dockerfile_path: ./Dockerfile
+            dockerfile_path: .
